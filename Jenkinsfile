@@ -27,12 +27,13 @@ pipeline {
   post {
     always {
       // Send email notification to recipients
-      emailext(
-        subject: "github Jenkins Pipeline task by vishal",
-        body: "The pipeline has completed successfully.",
-        to: "rajesh3390@gmail.com","avsvishal94@gmail.com",
-        replyTo: "rajesh3390@gmail.com","avsvishal94@gmail.com",
-      )
+      emailext (
+  subject: 'github Jenkins Pipeline task by vishal',
+  body: 'The pipeline has completed successfully.',
+  to: 'rajesh3390@gmail.com, avsvishal94@gmail.com',
+  replyTo: 'rajesh3390@gmail.com'
+)
+
     }
   }
 }
