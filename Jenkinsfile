@@ -9,8 +9,9 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('Emailresults') {
       steps {
+          emailext attachLog: true, attachmentsPattern: '*xml', body: 'assignment', compressLog: true, mimeType: 'text/html', subject: 'GIT hub jenkins pipeline', to: 'rajesh3390@gmail.com, avsvishal94@gmail.com'
         // Perform your testing steps here
         sh 'echo "Testing..."'
       }
